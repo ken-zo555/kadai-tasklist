@@ -46,6 +46,7 @@ class TasksController extends Controller
         return view('tasks.create', [
             'task' => $task,
         ]);
+        return redirect('/');
     }
 
     /**
@@ -66,7 +67,6 @@ class TasksController extends Controller
         $task->status = $request->status;
         $task->user_id = \Auth::id();
         $task->save();
-
         return redirect('/');
     }
 
@@ -85,6 +85,7 @@ class TasksController extends Controller
                     'task' => $task,
             ]);
         }
+        return redirect('/');
     }
 
     /**
@@ -102,6 +103,7 @@ class TasksController extends Controller
                 'task' => $task,
             ]);
         }
+        return redirect('/');
     }
 
     /**
@@ -123,7 +125,6 @@ class TasksController extends Controller
         $task->status = $request->status;
         $task->user_id = \Auth::id();
         $task->save();
-
         return redirect('/');
     }
 
